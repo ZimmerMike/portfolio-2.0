@@ -1,0 +1,12 @@
+::ng-deep .my-custom-button .p-button {
+    transition: transform .6s ease-in-out;
+    z-index: 5000;
+}
+
+::ng-deep .my-custom-button .p-button-icon {
+    font-size: 30px;
+}
+
+::ng-deep .my-custom-button .p-button:focus {
+    transform: scale(1.5);
+}
