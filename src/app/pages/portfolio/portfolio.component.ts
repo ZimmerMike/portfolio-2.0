@@ -9,6 +9,8 @@ import { DockModule } from 'primeng/dock';
 
 // Prime Icons
 import { PrimeIcons } from 'primeng/api';
+import { SidebarComponent } from '../../core/components/sidebar/sidebar.component';
+import { MobileNavbarComponent } from '../../core/components/mobile-navbar/mobile-navbar.component';
 
 @Component({
   selector: 'app-portfolio',
@@ -17,7 +19,9 @@ import { PrimeIcons } from 'primeng/api';
     ButtonModule,
     CommonModule,
     DockModule,
-    RouterOutlet
+    MobileNavbarComponent,
+    RouterOutlet,
+    SidebarComponent
   ],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
@@ -28,28 +32,34 @@ export class PortfolioComponent {
   constructor() {
     this.items = [
       {
-        label: 'Yo',
-        icon: PrimeIcons.USER
+        label: 'SIDEBAR.HOME',
+        icon: PrimeIcons.HOME,
+        routerLink: '/'
       },
       {
-        label: 'App Store',
-        icon: PrimeIcons.CODE
+        label: 'SIDEBAR.PROJECTS',
+        icon: PrimeIcons.CODE,
+        routerLink: 'projects'
       },
       {
-        label: 'Photos',
-        icon: PrimeIcons.BRIEFCASE
+        label: 'SIDEBAR.EXPERIENCE',
+        icon: PrimeIcons.BRIEFCASE,
+        routerLink: 'experience'
       },
       {
-        label: 'Trash',
-        icon: PrimeIcons.BOOK
+        label: 'SIDEBAR.EDUCATION',
+        icon: PrimeIcons.BOOK,
+        routerLink: 'education'
       },
       {
-        label: 'Trash',
-        icon: PrimeIcons.CHECK_CIRCLE
+        label: 'SIDEBAR.CERTIFICATIONS',
+        icon: PrimeIcons.CHECK_CIRCLE,
+        routerLink: 'certifications'
       },
       {
-        label: 'Trash',
-        icon: PrimeIcons.ENVELOPE
+        label: 'SIDEBAR.CONTACT',
+        icon: PrimeIcons.ENVELOPE,
+        routerLink: 'contact'
       }
     ];
   }

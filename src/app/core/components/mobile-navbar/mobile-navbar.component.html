@@ -1,0 +1,9 @@
+<p-dock [model]="items" position="bottom">
+    <ng-template pTemplate="item" let-item>
+        <p-button
+            styleClass="tw-bg-transparent tw-border-none focus:tw-shadow-none"
+            class="my-custom-button"
+            [icon]="item.icon"
+            [rounded]="true" />
+    </ng-template>
+</p-dock>

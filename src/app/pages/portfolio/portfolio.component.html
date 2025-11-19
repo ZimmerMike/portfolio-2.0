@@ -1,21 +1,14 @@
 <div class="tw-h-screen tw-flex tw-flex-col">
-    <header class="tw-flex-shrink-0 tw-h-28">
-        Este es el header
+    <header class="tw-flex-shrink-0 tw-h-28 tw-flex tw-items-center tw-justify-center">
+        <h1 class="tw-text-center tw-text-5xl">{{ 'Este es el header' }}</h1>
     </header>
     <div class="tw-flex tw-flex-1">
-        <aside class="tw-h-full tw-w-1/3 tw-hidden md:tw-block">
-            
-        </aside>
-        <main class="tw-w-full md:tw-w-2/3">
+        <app-sidebar [items]="items" />
+        <main class="tw-w-full md:tw-w-2/3 tw-p-8">
             <router-outlet />
-            Y este el contenido principal
         </main>
     </div>
     <footer class="tw-block md:tw-hidden">
-        <p-dock [model]="items" position="bottom">
-            <ng-template pTemplate="item" let-item>
-                <p-button styleClass="tw-bg-transparent tw-border-none focus:tw-shadow-none" class="my-custom-button" [icon]="item.icon" [rounded]="true"></p-button>
-            </ng-template>
-        </p-dock>
+        <app-mobile-navbar [items]="items" />
     </footer>
 </div>

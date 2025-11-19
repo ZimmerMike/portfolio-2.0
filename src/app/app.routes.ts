@@ -8,6 +8,31 @@ export const routes: Routes = [
     {
         path: 'me',
         loadComponent: () => import('./pages/portfolio/portfolio.component').then(c => c.PortfolioComponent),
-        children: []
+        children: [
+            {
+                path: '',
+                loadComponent: () => import('./pages/portfolio/summary/summary.component').then(c => c.SummaryComponent)
+            },
+            {
+                path: 'projects',
+                loadComponent: () => import('./pages/portfolio/projects/projects.component').then(c => c.ProjectsComponent)
+            },
+            {
+                path: 'experience',
+                loadComponent: () => import('./pages/portfolio/experience/experience.component').then(c => c.ExperienceComponent)
+            },
+            {
+                path: 'education',
+                loadComponent: () => import('./pages/portfolio/education/education.component').then(c => c.EducationComponent)
+            },
+            {
+                path: 'certifications',
+                loadComponent: () => import('./pages/portfolio/certifications/certifications.component').then(c => c.CertificationsComponent)
+            },
+            // {
+            //     path: 'contact',
+            //     loadComponent: () => import('./pages/portfolio/summary/summary.component').then(c => c.SummaryComponent)
+            // }
+        ]
     }
 ];
