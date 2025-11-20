@@ -21,8 +21,8 @@ import { AppConstants } from '../../core/constants/app.constants';
   styleUrl: './landing.component.scss'
 })
 export class LandingComponent implements OnInit {
-  public availableLanguages!: any[];
-  public selectedLanguage!: any;
+  public availableLanguages: any[];
+  public selectedLanguage: any;
 
   constructor(private readonly translateService: TranslateService) {
     this.availableLanguages = AppConstants.LANGUAGE_OPTIONS;
