@@ -10,3 +10,14 @@
 ::ng-deep .my-custom-button .p-button:focus {
     transform: scale(1.5);
 }
+
+.header {
+    display: flex;
+}
+
+.highlight {
+    color: transparent;
+    background: -webkit-linear-gradient(270deg, #8b24ab,#bb2c9d,#eb584d);
+    background: linear-gradient(270deg, #8b24ab,#bb2c9d,#eb584d);
+    background-clip: text;
+}

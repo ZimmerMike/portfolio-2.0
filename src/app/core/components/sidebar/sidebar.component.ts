@@ -1,20 +1,35 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import { MenuItem } from 'primeng/api';
+import { MenuItem, PrimeIcons } from 'primeng/api';
+import { SidebarConstants } from '../../constants/sidebar.constants';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
   imports: [
     CommonModule,
-    RouterLink,
     TranslateModule
   ],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })
 export class SidebarComponent {
-  @Input() items!: MenuItem[];
+  @Input() sidebarOpen: boolean;
+  @Output() itemClick = new EventEmitter<void>();
+
+  
+  public items: MenuItem[];
+
+  constructor(
+    private readonly router: Router
+  ) {
+    this.items = SidebarConstants.SIDEBAR_ITEMS;
+  }
+
+  public onItemClick(item: MenuItem): void {
+    this.router.navigate([item.routerLink]);
+    this.itemClick.emit();
+  }
 }

@@ -11,6 +11,11 @@ export const routes: Routes = [
         children: [
             {
                 path: '',
+                pathMatch: 'full',
+                redirectTo: 'about'
+            },
+            {
+                path: 'about',
                 loadComponent: () => import('./pages/portfolio/summary/summary.component').then(c => c.SummaryComponent)
             },
             {
@@ -28,11 +33,16 @@ export const routes: Routes = [
             {
                 path: 'certifications',
                 loadComponent: () => import('./pages/portfolio/certifications/certifications.component').then(c => c.CertificationsComponent)
-            },
+            }
             // {
             //     path: 'contact',
             //     loadComponent: () => import('./pages/portfolio/summary/summary.component').then(c => c.SummaryComponent)
             // }
         ]
+    },
+    // 404 Handler
+    {
+        path: '**',
+        loadComponent: () => import('./core/components/views/not-found/not-found.component').then(c => c.NotFoundComponent),
     }
 ];
