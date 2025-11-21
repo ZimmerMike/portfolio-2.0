@@ -13,9 +13,11 @@
     </a>
   </header>
   <div class="tw-flex tw-flex-1">
-    <app-sidebar
-      [sidebarOpen]="sidebarOpen"
-      (itemClick)="onSidebarItemClick()" />
+    <div class="tw-relative">
+      <app-sidebar
+        [sidebarOpen]="sidebarOpen"
+        (itemClick)="onSidebarItemClick()" />
+    </div>
     <main class="tw-w-full md:tw-w-2/3 tw-p-8">
       <router-outlet />
     </main>
