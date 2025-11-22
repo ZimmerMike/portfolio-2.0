@@ -3,7 +3,7 @@ import { MenuItem, PrimeIcons } from "primeng/api";
 export class SidebarConstants {
   public static readonly SIDEBAR_ITEMS: MenuItem[] = [
     {
-      label: 'SIDEBAR.ME',
+      label: 'SIDEBAR.SUMMARY',
       icon: PrimeIcons.USER,
       routerLink: 'me/about'
     },

@@ -1,27 +1,29 @@
 <ng-template #sidebarContent>
-  <ul class="tw-list-none tw-flex tw-flex-col tw-gap-2 tw-pl-0 tw-min-w-[320px] tw-w-1/2 tw-max-w-md">
-    @for (item of items; track $index) {
-    <li>
-      <a
-        class="tw-group tw-border-2 tw-border-solid tw-border-black/5 tw-text-black/50 tw-rounded-lg hover:tw-backdrop-blur-xl hover:tw-text-black hover:tw-bg-black/5 hover:tw-scale-105 hover:tw-rounded-2xl tw-duration-300 tw-ease-in-out tw-no-underline tw-flex tw-gap-4 tw-items-center tw-px-4 tw-py-4 tw-cursor-pointer"
-        (click)="onItemClick(item)">
-        <i [ngClass]="item.icon"></i>
-        <span class="tw-font-bold tw-text-xl group-hover:tw-translate-x-8 tw-duration-300 tw-ease-in-out">
-          {{ item.label! | translate }}
-        </span>
-      </a>
-    </li>
-    }
-  </ul>
-  <div class="tw-flex tw-items-center tw-justify-evenly tw-w-full md:tw-hidden">
-    <p-dropdown
-      appendTo="body"
-      [(ngModel)]="selectedLanguage"
-      [options]="availableLanguages"
-      [placeholder]="'Select language'"
-      (onChange)="switchLanguage($event.value)"
-      optionValue="value" />
-    <app-custom-darkmode-switch />
+  <div class="tw-h-full tw-flex tw-flex-col tw-justify-between">
+    <ul class="tw-list-none tw-flex tw-flex-col tw-gap-2 tw-pl-0 tw-min-w-[320px] tw-w-1/2 tw-max-w-md">
+      @for (item of items; track $index) {
+      <li>
+        <a
+          class="tw-group tw-border-2 tw-border-solid tw-border-black/5 tw-text-black/50 tw-rounded-lg hover:tw-backdrop-blur-xl hover:tw-text-black hover:tw-bg-black/5 hover:tw-scale-105 hover:tw-rounded-2xl tw-duration-300 tw-ease-in-out tw-no-underline tw-flex tw-gap-4 tw-items-center tw-px-4 tw-py-4 tw-cursor-pointer"
+          (click)="onItemClick(item)">
+          <i [ngClass]="item.icon"></i>
+          <span class="tw-font-bold tw-text-xl group-hover:tw-translate-x-8 tw-duration-300 tw-ease-in-out">
+            {{ item.label! | translate }}
+          </span>
+        </a>
+      </li>
+      }
+    </ul>
+    <div class="tw-flex tw-items-center tw-justify-evenly tw-w-full md:tw-hidden">
+      <p-dropdown
+        appendTo="body"
+        [(ngModel)]="selectedLanguage"
+        [options]="availableLanguages"
+        [placeholder]="'Select language'"
+        (onChange)="switchLanguage($event.value)"
+        optionValue="value" />
+      <app-custom-darkmode-switch />
+    </div>
   </div>
 </ng-template>
 

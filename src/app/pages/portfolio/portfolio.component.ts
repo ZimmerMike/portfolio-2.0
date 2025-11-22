@@ -1,13 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ButtonModule } from 'primeng/button';
 
 // PrimeNG
-import { DockModule } from 'primeng/dock';
+import { ButtonModule } from 'primeng/button';
+import { DropdownModule } from 'primeng/dropdown';
 
 // Prime Icons
 import { SidebarComponent } from '../../core/components/sidebar/sidebar.component';
+import { FormsModule } from '@angular/forms';
+import { AppConstants } from '../../core/constants/app.constants';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-portfolio',
@@ -15,7 +18,8 @@ import { SidebarComponent } from '../../core/components/sidebar/sidebar.componen
   imports: [
     ButtonModule,
     CommonModule,
-    DockModule,
+    DropdownModule,
+    FormsModule,
     RouterOutlet,
     SidebarComponent
   ],
@@ -23,12 +27,26 @@ import { SidebarComponent } from '../../core/components/sidebar/sidebar.componen
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
-  public sidebarOpen: boolean;
+  public availableLanguages: any[];
+  public selectedLanguage: any;
 
-  constructor() {
-
+  constructor(private readonly translateService: TranslateService) {
+    this.availableLanguages = AppConstants.LANGUAGE_OPTIONS;
     this.sidebarOpen = false;
   }
+
+  public ngOnInit(): void {
+    const saved = localStorage.getItem(AppConstants.LANG_KEY);
+    this.selectedLanguage = saved || this.translateService.currentLang || this.translateService.getDefaultLang();
+
+    this.translateService.use(this.selectedLanguage);
+  }
+
+  public switchLanguage(tag: string): void {
+    this.translateService.use(tag);
+  }
+  public sidebarOpen: boolean;
+
 
   public toggleSidebar(open?: boolean): void {
     this.sidebarOpen = open ?? !this.sidebarOpen;

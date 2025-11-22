@@ -1,23 +1,55 @@
 {
-    "HI": "Hi!",
-    "LANDING": {
-        "BUTTONS": {
-            "CONTACT": "Contact me",
-            "LEARN_ABOUT_ME": "Learn more about me"
-        },
-        "HEADER": "I'm Miguel Angel Hernandez Jimenez",
-        "HERO_PARAGRAPH_1": "Front-End Developer specializing in <strong>Angular</strong> and enthusiastic about video game development",
-        "HERO_PARAGRAPH_2": "Although I have many other skills...",
-        "OR": "or",
-        "SUBHEADER": "But you can call me <strong class='tw-text-2xl'>Mike</strong>"
+  "HI": "Hi!",
+  "LANDING": {
+    "BUTTONS": {
+      "CONTACT": "Contact me",
+      "LEARN_ABOUT_ME": "Learn more about me"
     },
-    "SIDEBAR": {
-        "CERTIFICATIONS": "Certifications",
-        "CONTACT": "Contact",
-        "EDUCATION": "Education",
-        "EXPERIENCE": "Experience",
-        "HOME": "Home",
-        "ME": "About me",
-        "PROJECTS": "Projects"
-    }
+    "HEADER": "I'm Miguel Angel Hernandez Jimenez",
+    "HERO_PARAGRAPH_1": "Front-End Developer specializing in <strong>Angular</strong> and enthusiastic about video game development",
+    "HERO_PARAGRAPH_2": "Although I have many other skills...",
+    "OR": "or",
+    "SUBHEADER": "But you can call me <strong class='tw-text-2xl'>Mike</strong>"
+  },
+  "PROJECTS": {
+    "PANEL_1": {
+      "HEADER": ""
+    },
+    "TITLE": "Projects"
+  },
+  "SIDEBAR": {
+    "CERTIFICATIONS": "Certifications",
+    "CONTACT": "Contact",
+    "EDUCATION": "Education",
+    "EXPERIENCE": "Experience",
+    "HOME": "Home",
+    "PROJECTS": "Projects",
+    "SUMMARY": "Summary"
+  },
+  "SUMMARY": {
+    "PANEL_1": {
+      "HEADER": "Who am I?",
+      "PARAGRAPH_1": "My name is <strong>Miguel Ángel Hernández Jiménez</strong>, and I am a <strong>Software Developer</strong> specialized in the <strong>MEAN stack</strong>. I am passionate about building efficient, scalable solutions with a strong focus on user experience.",
+      "PARAGRAPH_2": "I consider myself a <strong>disciplined, persistent, and results-driven</strong> professional. When I set an objective, I commit fully until it is completed. I prefer taking the necessary time to deliver high-quality work rather than choosing shortcuts that compromise the outcome.",
+      "PARAGRAPH_3": "I don’t claim to know everything, but I do have a skill I value highly: <strong>the ability to learn continuously</strong>. This mindset has allowed me to overcome complex challenges and adapt quickly to new technologies. As long as I can learn, I am capable of solving any problem that comes my way."
+    },
+    "PANEL_2": {
+      "HEADER": "What technologies do I work with?",
+      "PARAGRAPH_1": "Throughout my professional journey, I have worked with a wide range of technologies, with my strongest experience in <strong>Angular, TypeScript, Node.js, Express.js, and MongoDB</strong>. These tools form the foundation of my expertise in building modern, high-performance applications.",
+      "PARAGRAPH_2": "During my university studies, I learned the fundamentals of <strong>object-oriented programming</strong> using <strong>Java</strong>, and had the opportunity to practice and experiment with <strong>C++</strong>. I also gained basic experience with <strong>SQL Server</strong>, which helped me understand the core concepts of relational databases.",
+      "PARAGRAPH_3": "I am currently expanding my skill set into the <strong>Python</strong> ecosystem by learning <strong>Django</strong>, aiming to strengthen my <strong>Back-End</strong> development capabilities and further diversify my technical profile."
+    },
+    "PANEL_3": {
+      "HEADER": "My Hobbies and Personal Interests",
+      "PARAGRAPH_1": "My main hobbies include <strong>music</strong> and <strong>video games</strong>, although I also enjoy building computers, cooking, and driving. I consider myself a curious person who loves learning and trying new activities.",
+      "SECTION_1_TITLE": "Music",
+      "PARAGRAPH_2": "As a musician, I play <strong>guitar, bass, and drums</strong>, and I occasionally experiment with writing my own songs. Music has been a meaningful part of my life, helping me develop discipline, creativity, and teamwork skills.",
+      "PARAGRAPH_3": "My musical taste revolves mainly around <strong>Alternative Rock</strong>, <strong>Metalcore</strong>, <strong>Thrash Metal</strong>, and <strong>Nu Metal</strong>. Still, I also enjoy genres like pop, hip-hop, and classical music, as I appreciate analyzing different styles and their composition.",
+      "SECTION_2_TITLE": "Video Games",
+      "PARAGRAPH_4": "I'm naturally competitive, so I particularly enjoy <strong>PVP multiplayer</strong> games. I love the feeling of improving over time and testing my skills against other players.",
+      "PARAGRAPH_5": "I also enjoy adventure games and cooperative horror titles, where teamwork and shared experiences make the gameplay even more enjoyable.",
+      "PARAGRAPH_6": "Some of my favorite games include <strong>League of Legends, Apex Legends, and PUBG</strong> on the competitive side, and <strong>REPO, PEAK, and Phasmophobia</strong> among cooperative titles."
+    },
+    "TITLE": "Summary"
+  }
 }

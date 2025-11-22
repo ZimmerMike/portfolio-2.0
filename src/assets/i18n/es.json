@@ -1,23 +1,57 @@
 {
-    "HI": "Hola!",
-    "LANDING": {
-        "BUTTONS": {
-            "CONTACT": "Contáctame",
-            "LEARN_ABOUT_ME": "Conoce más sobre mí"
-        },
-        "HEADER": "Yo soy Miguel Angel Hernandez Jimenez",
-        "HERO_PARAGRAPH_1": "Desarrollador Front-End especializado en <strong>Angular</strong> y entusiasta del desarrollo de videojuegos",
-        "HERO_PARAGRAPH_2": "Aunque también tengo muchas otras habilidades...",
-        "OR": "ó",
-        "SUBHEADER": "Pero puedes llamarme <strong class='tw-text-2xl'>Mike</strong>"
+  "HI": "Hola!",
+  "LANDING": {
+    "BUTTONS": {
+      "CONTACT": "Contáctame",
+      "LEARN_ABOUT_ME": "Conoce más sobre mí"
     },
-    "SIDEBAR": {
-        "CERTIFICATIONS": "Certificaciones",
-        "CONTACT": "Contáctame",
-        "EDUCATION": "Educación",
-        "EXPERIENCE": "Experiencia",
-        "HOME": "Inicio",
-        "ME": "Sobre mí",
-        "PROJECTS": "Proyectos"
-    }
+    "HEADER": "Yo soy Miguel Angel Hernandez Jimenez",
+    "HERO_PARAGRAPH_1": "Desarrollador Front-End especializado en <strong>Angular</strong> y entusiasta del desarrollo de videojuegos",
+    "HERO_PARAGRAPH_2": "Aunque también tengo muchas otras habilidades...",
+    "OR": "ó",
+    "SUBHEADER": "Pero puedes llamarme <strong class='tw-text-2xl'>Mike</strong>"
+  },
+  "PROJECTS": {
+    "PANEL_1": {
+      "HEADER": "Portafolio laboral"
+    },
+    "TITLE": "Proyectos"
+  },
+  "SIDEBAR": {
+    "CERTIFICATIONS": "Certificaciones",
+    "CONTACT": "Contáctame",
+    "EDUCATION": "Educación",
+    "EXPERIENCE": "Experiencia",
+    "HOME": "Inicio",
+    "PROJECTS": "Proyectos",
+    "SUMMARY": "Resumen"
+  },
+  "SUMMARY": {
+    "PANEL_1": {
+      "HEADER": "¿Quién soy?",
+      "PARAGRAPH_1": "Mi nombre es <strong>Miguel Ángel Hernández Jiménez</strong> y soy un <strong>Desarrollador de Software</strong> especializado en la stack <strong>MEAN</strong>. Me apasiona crear soluciones eficientes, escalables y con una excelente experiencia de usuario.",
+      "PARAGRAPH_2": "Me considero una persona <strong>disciplinada, persistente y orientada a resultados</strong>. Cuando asumo un objetivo, me comprometo completamente hasta verlo terminado. Prefiero invertir el tiempo necesario para entregar un trabajo bien hecho antes que optar por atajos que comprometan la calidad.",
+      "PARAGRAPH_3": "No pretendo decir que lo sé todo, pero sí cuento con una cualidad que valoro enormemente: <strong>la capacidad constante de aprender</strong>. Esta mentalidad me ha permitido superar desafíos complejos y adaptarme rápidamente a nuevas tecnologías. Mientras pueda aprender, puedo resolver cualquier problema que se presente."
+    },
+    "PANEL_2": {
+      "HEADER": "¿Qué tecnologías manejo?",
+      "PARAGRAPH_1": "A lo largo de mi trayectoria profesional he trabajado con diversas tecnologías, destacando especialmente <strong>Angular, TypeScript, Node.js, Express.js y MongoDB</strong>. Estas herramientas forman el núcleo de mi experiencia en el desarrollo de aplicaciones modernas y de alto rendimiento.",
+      "PARAGRAPH_2": "Durante mi formación universitaria aprendí los fundamentos de la <strong>programación orientada a objetos</strong> con <strong>Java</strong>, y tuve la oportunidad de desarrollar ejercicios y prácticas en <strong>C++</strong>. Además, trabajé de forma básica con <strong>SQL Server</strong>, lo que me permitió comprender los fundamentos de las bases de datos relacionales.",
+      "PARAGRAPH_3": "Actualmente me encuentro expandiendo mis habilidades hacia el ecosistema <strong>Python</strong>, aprendiendo <strong>Django</strong> para fortalecer mi perfil en el desarrollo <strong>Back-End</strong> y diversificar mis capacidades como desarrollador."
+    },
+    "PANEL_3": {
+      "HEADER": "Mis hobbies y gustos personales",
+      "PARAGRAPH_1": "Mis principales hobbies son la <strong>música</strong> y los <strong>videojuegos</strong>, aunque también disfruto armar computadoras, cocinar y conducir. Me considero una persona curiosa y con gusto por aprender actividades nuevas.",
+      
+      "SECTION_1_TITLE": "Música",
+      "PARAGRAPH_2": "Como músico, toco <strong>guitarra, bajo y batería</strong>, y ocasionalmente compongo ideas para nuevas canciones. La música ha sido una parte importante de mi vida y me ha permitido desarrollar disciplina, creatividad y trabajo en equipo.",
+      "PARAGRAPH_3": "Mis gustos musicales se inclinan principalmente hacia el <strong>Rock Alternativo</strong>, <strong>Metalcore</strong>, <strong>Thrash Metal</strong> y <strong>Nu Metal</strong>. Sin embargo, también disfruto géneros como pop, hip-hop y música clásica, ya que me gusta analizar diferentes estilos y su composición.",
+      
+      "SECTION_2_TITLE": "Videojuegos",
+      "PARAGRAPH_4": "Soy una persona competitiva por naturaleza, por lo que disfruto especialmente los videojuegos <strong>multijugador PVP</strong>. Me motiva la sensación de mejorar constantemente y poner a prueba mis habilidades contra otros jugadores.",
+      "PARAGRAPH_5": "También disfruto juegos de aventuras y títulos de terror cooperativos, donde la experiencia y la coordinación con amigos se vuelven parte esencial de la diversión.",
+      "PARAGRAPH_6": "Entre mis juegos favoritos se encuentran: <strong>League of Legends, Apex Legends y PUBG</strong> del lado competitivo; y <strong>REPO, PEAK y Phasmophobia</strong> en los cooperativos."
+    },
+    "TITLE": "Resumen"
+  }
 }
