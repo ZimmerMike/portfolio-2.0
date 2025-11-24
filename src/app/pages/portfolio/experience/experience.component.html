@@ -1,1 +1,84 @@
-<p>experience works!</p>
+<main>
+  <header>
+    <h1 class="tw-text-2xl md:tw-text-3xl tw-text-center">{{ 'EXPERIENCE.TITLE' | translate }}</h1>
+  </header>
+  <section>
+    <div class="card">
+      <p-timeline [value]="events" [align]="timelineAlign">
+        <ng-template pTemplate="marker" let-event>
+          <span class="tw-flex tw-w-4 tw-h-4 md:tw-w-6 md:tw-h-6 tw-text-xs tw-font-semibold md:tw-text-lg tw-items-center tw-justify-center tw-text-white tw-rounded-full tw-z-1 tw-shadow-xl tw-bg-blue-500">
+            {{ event.idx + 1 }}
+          </span>
+        </ng-template>
+
+        <ng-template pTemplate="content" let-event>
+          <p-card [header]="event.companyName" [subheader]="event.position">
+            <div class="tw-flex tw-flex-col">
+              <h6 class="tw-m-0 tw-float-right">
+                {{ event.startDate }} -
+                {{ event.currentJob ? 'Actualidad' : event.endDate }}
+              </h6>
+              <div class="tw-flex tw-flex-col tw-items-center md:tw-hidden">
+                <div
+                  #mobileDesc
+                  class="tw-overflow-hidden tw-transition-[max-height] tw-duration-1000 tw-ease-in-out"
+                  [ngClass]="{
+                    'tw-max-h-32': !expanded[event.idx],
+                    'tw-max-h-[2000px]': expanded[event.idx]
+                  }">
+                  <ng-container
+                    *ngTemplateOutlet="descText; context: { event: event }">
+                  </ng-container>
+                </div>
+
+                <p-button
+                  *ngIf="isTruncated[event.idx]"
+                  class="tw-mt-1"
+                  styleClass="tw-text-xs"
+                  iconPos="right"
+                  [icon]="'tw-text-xs ' + (expanded[event.idx] ? 'pi pi-chevron-up' : 'pi pi-chevron-down')"
+                  [label]="expanded[event.idx] ? 'Leer menos' : 'Leer más'"
+                  [text]="true"
+                  (onClick)="toggleExpand(event.idx)">
+                </p-button>
+              </div>
+            </div>
+          </p-card>
+        </ng-template>
+        <ng-template pTemplate="opposite" let-event>
+          <div class="tw-hidden md:tw-flex tw-flex-col tw-items-center">
+            <div
+              #desktopDesc
+              class="tw-overflow-hidden tw-transition-[max-height] tw-duration-1000 tw-ease-in-out"
+              [ngClass]="{
+                'tw-max-h-64': !expanded[event.idx],
+                'tw-max-h-[2000px]': expanded[event.idx]
+              }">
+              <ng-container
+                *ngTemplateOutlet="descText; context: { event: event }">
+              </ng-container>
+            </div>
+
+            <p-button
+              *ngIf="isTruncated[event.idx]"
+              class="tw-mt-1"
+              styleClass="tw-text-sm"
+              iconPos="right"
+              [icon]="expanded[event.idx] ? 'pi pi-chevron-up' : 'pi pi-chevron-down'"
+              [label]="expanded[event.idx] ? 'Leer menos' : 'Leer más'"
+              [text]="true"
+              (onClick)="toggleExpand(event.idx)">
+            </p-button>
+          </div>
+        </ng-template>
+      </p-timeline>
+    </div>
+  </section>
+</main>
+
+<ng-template #descText let-event="event">
+  <p
+    class="tw-text-xs md:tw-text-sm tw-text-black/50 tw-text-justify tw-whitespace-pre-line tw-align-middle"
+    [innerHTML]="event.description | translate">
+  </p>
+</ng-template>

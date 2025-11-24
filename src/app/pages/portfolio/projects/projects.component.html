@@ -1,1 +1,16 @@
-<p>projects works!</p>
+<main>
+  <header>
+    <h1 class="tw-text-2xl md:tw-text-3xl tw-text-center">{{ 'PROJECTS.TITLE' | translate }}</h1>
+  </header>
+  <section class="tw-flex tw-flex-col tw-gap-4 tw-flex-wrap tw-overflow-scroll">
+    @for (item of projects; track $index) {
+        <p-panel [header]="'PROJECTS.PANEL_1.HEADER' | translate">
+        <article class="tw-text-justify">
+            <p [innerHTML]="'PROJECTS.PANEL_1.PARAGRAPH_1' | translate"></p>
+            <p [innerHTML]="'PROJECTS.PANEL_1.PARAGRAPH_2' | translate"></p>
+            <p [innerHTML]="'PROJECTS.PANEL_1.PARAGRAPH_3' | translate"></p>
+        </article>
+        </p-panel>
+    }
+  </section>
+</main>

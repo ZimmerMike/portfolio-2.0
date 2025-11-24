@@ -1,0 +1,23 @@
+:host ::ng-deep .p-timeline.p-timeline-alternate .p-timeline-event-content {
+  margin-bottom: 1rem !important;
+}
+
+:host ::ng-deep .p-timeline.p-timeline-alternate .p-timeline-event-opposite {
+  margin-bottom: 1rem !important;
+}
+
+@media (max-width: 1024px) {
+  :host ::ng-deep .p-timeline.p-timeline-left .p-timeline-event-opposite {
+    display: none !important;
+  }
+
+  :host ::ng-deep .p-timeline.p-timeline-left .p-timeline-event-content {
+    width: 100% !important;
+    flex: 1;
+    margin-bottom: 1rem !important;
+  }
+
+  :host ::ng-deep .p-timeline.p-timeline-left .p-timeline-event {
+    grid-template-columns: auto 1fr !important;
+  }
+}

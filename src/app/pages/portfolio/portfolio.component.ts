@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 // PrimeNG
 import { ButtonModule } from 'primeng/button';
@@ -20,6 +20,7 @@ import { TranslateService } from '@ngx-translate/core';
     CommonModule,
     DropdownModule,
     FormsModule,
+    RouterLink,
     RouterOutlet,
     SidebarComponent
   ],

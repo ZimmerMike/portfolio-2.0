@@ -1,0 +1,1 @@
+export type ConditionalAlign = 'left' | 'alternate';
