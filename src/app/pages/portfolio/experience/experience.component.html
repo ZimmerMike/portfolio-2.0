@@ -1,4 +1,8 @@
 <main>
+<div
+  class="tw-w-40 tw-h-20 tw-bg-white tw-dark:tw-bg-red-500 tw-text-black tw-dark:tw-text-white tw-flex tw-items-center tw-justify-center tw-m-4">
+  Dark test
+</div>
   <header>
     <h1 class="tw-text-2xl md:tw-text-3xl tw-text-center">{{ 'EXPERIENCE.TITLE' | translate }}</h1>
   </header>
@@ -21,10 +25,10 @@
               <div class="tw-flex tw-flex-col tw-items-center md:tw-hidden">
                 <div
                   #mobileDesc
-                  class="tw-overflow-hidden tw-transition-[max-height] tw-duration-1000 tw-ease-in-out"
+                  class="tw-overflow-hidden tw-transition-[max-height] tw-duration-700 tw-ease-in-out"
                   [ngClass]="{
                     'tw-max-h-32': !expanded[event.idx],
-                    'tw-max-h-[2000px]': expanded[event.idx]
+                    'tw-max-h-fit': expanded[event.idx]
                   }">
                   <ng-container
                     *ngTemplateOutlet="descText; context: { event: event }">
@@ -49,10 +53,10 @@
           <div class="tw-hidden md:tw-flex tw-flex-col tw-items-center">
             <div
               #desktopDesc
-              class="tw-overflow-hidden tw-transition-[max-height] tw-duration-1000 tw-ease-in-out"
+              class="tw-overflow-hidden tw-transition-[max-height] tw-duration-700 tw-ease-in-out"
               [ngClass]="{
                 'tw-max-h-64': !expanded[event.idx],
-                'tw-max-h-[2000px]': expanded[event.idx]
+                'tw-max-h-fit': expanded[event.idx]
               }">
               <ng-container
                 *ngTemplateOutlet="descText; context: { event: event }">
@@ -78,7 +82,7 @@
 
 <ng-template #descText let-event="event">
   <p
-    class="tw-text-xs md:tw-text-sm tw-text-black/50 tw-text-justify tw-whitespace-pre-line tw-align-middle"
+    class="tw-text-xs md:tw-text-sm tw-text-black/50 tw-text-justify tw-whitespace-pre-line tw-align-middle dark:tw-text-white/90"
     [innerHTML]="event.description | translate">
   </p>
 </ng-template>

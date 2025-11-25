@@ -11,6 +11,7 @@ import { SidebarComponent } from '../../core/components/sidebar/sidebar.componen
 import { FormsModule } from '@angular/forms';
 import { AppConstants } from '../../core/constants/app.constants';
 import { TranslateService } from '@ngx-translate/core';
+import { CustomDarkmodeSwitchComponent } from '../../core/components/custom-darkmode-switch/custom-darkmode-switch.component';
 
 @Component({
   selector: 'app-portfolio',
@@ -18,6 +19,7 @@ import { TranslateService } from '@ngx-translate/core';
   imports: [
     ButtonModule,
     CommonModule,
+    CustomDarkmodeSwitchComponent,
     DropdownModule,
     FormsModule,
     RouterLink,

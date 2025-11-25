@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 
 import { BreakpointObserver } from '@angular/cdk/layout';
@@ -39,6 +39,11 @@ export class ExperienceComponent implements AfterViewInit, OnInit {
   constructor(private readonly breakpointObserver: BreakpointObserver) {
     this.observeBreakpoints();
   }
+  
+  @HostListener('window:resize', [])
+  onWindowResize(): void {
+    setTimeout(() => this.updateTruncation(), 0);
+  }
 
   public ngOnInit(): void {
     const rawEvents: ExperienceEvent[] = ExperienceConstants.JOB_EVENTS;
@@ -46,7 +51,7 @@ export class ExperienceComponent implements AfterViewInit, OnInit {
     this.events = rawEvents.map((e, i) => ({
       ...e,
       idx: i
-    }));
+    })).reverse();
 
     this.isTruncated = new Array(this.events.length).fill(false);
     this.expanded = new Array(this.events.length).fill(false);
@@ -63,6 +68,10 @@ export class ExperienceComponent implements AfterViewInit, OnInit {
     });
   }
 
+  public toggleExpand(idx: number): void {
+    this.expanded[idx] = !this.expanded[idx];
+  }
+
   private updateTruncation(): void {
     const refs = this.isMobile ? this.mobileDescRefs : this.desktopDescRefs;
 
@@ -70,10 +79,6 @@ export class ExperienceComponent implements AfterViewInit, OnInit {
       const el = ref.nativeElement;
       this.isTruncated[idx] = el.scrollHeight > el.clientHeight + 1;
     });
-  }
-
-  toggleExpand(idx: number): void {
-    this.expanded[idx] = !this.expanded[idx];
   }
 
   private observeBreakpoints(): void {

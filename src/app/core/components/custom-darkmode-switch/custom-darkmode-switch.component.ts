@@ -20,6 +20,7 @@ export class CustomDarkmodeSwitchComponent implements OnInit {
     const savedTheme = localStorage.getItem(AppConstants.THEME_KEY);
     this.isDarkMode = savedTheme === AppConstants.DARK_THEME_KEY;
     document.documentElement.classList.toggle(AppConstants.DARK_THEME_KEY, this.isDarkMode);
+    this.setPrimeNgTheme(this.isDarkMode);
   }
 
   public toggleDarkMode(isDark: boolean) {
@@ -27,5 +28,13 @@ export class CustomDarkmodeSwitchComponent implements OnInit {
     // aquí aplicas tu lógica real de dark mode
     document.documentElement.classList.toggle(AppConstants.DARK_THEME_KEY, isDark);
     localStorage.setItem(AppConstants.THEME_KEY, isDark ? AppConstants.DARK_THEME_KEY : AppConstants.LIGHT_THEME_KEY);
+    this.setPrimeNgTheme(isDark);
+  }
+  
+  private setPrimeNgTheme(isDark: boolean): void {
+    const themeLink = document.getElementById('primeng-theme') as HTMLLinkElement;
+    themeLink.href = isDark
+      ? 'assets/themes/aura-dark/theme.css'
+      : 'assets/themes/aura-light/theme.css';
   }
 }
