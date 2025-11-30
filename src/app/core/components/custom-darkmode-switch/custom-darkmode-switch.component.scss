@@ -43,7 +43,7 @@ button {
 
 /* Switch principal (igual que antes, pero ahora es un <div class="switch">) */
 .switch {
-  --font-size: 7px; // escalado del switch
+  --font-size: 6px; // escalado del switch
 
   --height: 5em;
   --width: 8em;
@@ -54,7 +54,7 @@ button {
   --color-sun: rgba(246, 211, 90, 1);
 
   --ease: cubic-bezier(0.77, 0, 0.175, 1);
-  --duration: 0.85s;
+  --duration: 0.5s;
 
   font-size: var(--font-size);
   position: relative;

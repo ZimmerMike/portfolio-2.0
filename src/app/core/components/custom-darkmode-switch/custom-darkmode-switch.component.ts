@@ -19,14 +19,12 @@ export class CustomDarkmodeSwitchComponent implements OnInit {
   public ngOnInit(): void {
     const savedTheme = localStorage.getItem(AppConstants.THEME_KEY);
     this.isDarkMode = savedTheme === AppConstants.DARK_THEME_KEY;
-    document.documentElement.classList.toggle(AppConstants.DARK_THEME_KEY, this.isDarkMode);
+    document.documentElement.classList.toggle(AppConstants.DARK_THEME_KEY);
     this.setPrimeNgTheme(this.isDarkMode);
   }
 
   public toggleDarkMode(isDark: boolean) {
-    this.isDarkMode = isDark;
-    // aquí aplicas tu lógica real de dark mode
-    document.documentElement.classList.toggle(AppConstants.DARK_THEME_KEY, isDark);
+    document.documentElement.classList.toggle(AppConstants.DARK_THEME_KEY);
     localStorage.setItem(AppConstants.THEME_KEY, isDark ? AppConstants.DARK_THEME_KEY : AppConstants.LIGHT_THEME_KEY);
     this.setPrimeNgTheme(isDark);
   }
