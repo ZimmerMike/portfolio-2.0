@@ -7,6 +7,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
   <link rel="icon" type="image/png" href="./assets/img/favicon.png">
   <link id="primeng-theme" rel="stylesheet" href="assets/themes/aura-light/theme.css" />
+  <script>
+      (function () {
+        var THEME_KEY = 'theme';
+        var DARK_KEY = 'tw-dark';
+        var LIGHT_KEY = 'light';
+
+        try {
+          var savedTheme = localStorage.getItem(THEME_KEY);
+          var isDark = savedTheme === DARK_KEY;
+
+          if (isDark) {
+            document.documentElement.classList.add('tw-dark');
+          } else {
+            document.documentElement.classList.remove('tw-dark');
+          }
+
+          var themeLink = document.getElementById('primeng-theme');
+          if (themeLink) {
+            themeLink.href = isDark
+              ? 'assets/themes/aura-dark/theme.css'
+              : 'assets/themes/aura-light/theme.css';
+          }
+        } catch (e) {
+          console.warn('Theme init failed', e);
+        }
+      })();
+    </script>
 </head>
 <body>
   <app-root></app-root>

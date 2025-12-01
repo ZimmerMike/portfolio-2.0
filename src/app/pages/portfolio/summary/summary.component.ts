@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { PanelModule } from 'primeng/panel';
+import { CardModule } from 'primeng/card';
 
 @Component({
   selector: 'app-summary',
   standalone: true,
   imports: [
-    PanelModule,
+    CardModule,
     TranslateModule
   ],
   templateUrl: './summary.component.html',

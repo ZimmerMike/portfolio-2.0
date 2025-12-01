@@ -26,5 +26,44 @@ html.tw-dark {
 
 :root {
   --font-family: "Montserrat";
+  --ripple-x: 50vw;
+  --ripple-y: 50vh;
   interpolate-size: allow-keywords;
+}
+
+html {
+  background-color: #f9fafb;  /* fondo claro */
+  color: #020617;
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease;
+}
+
+html.tw-dark {
+  background-color: #020617;  /* fondo dark */
+  color: #e5e7eb;
+}
+
+/* Ripple usando ::before */
+html.theme-ripple::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 99999;
+  background-color: var(--ripple-color);
+  clip-path: circle(0 at var(--ripple-x) var(--ripple-y));
+  opacity: 0.6;
+  animation: theme-ripple-expand 0.55s ease-out forwards;
+}
+
+@keyframes theme-ripple-expand {
+  from {
+    clip-path: circle(0 at var(--ripple-x) var(--ripple-y));
+    opacity: 0.6;
+  }
+  to {
+    clip-path: circle(140vmax at var(--ripple-x) var(--ripple-y));
+    opacity: 0;
+  }
 }
