@@ -16,7 +16,9 @@ export class CustomDarkmodeSwitchComponent implements OnInit, OnDestroy {
   private lastClickEvent: MouseEvent | null = null;
   private sub?: Subscription;
 
-  constructor(private themeService: ThemeService) {}
+  constructor(private themeService: ThemeService) {
+    
+  }
 
   /**
    * @description Runs once after component initialization to perform setup tasks.

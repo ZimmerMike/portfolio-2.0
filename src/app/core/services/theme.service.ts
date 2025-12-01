@@ -13,6 +13,7 @@ export class ThemeService {
 
     document.documentElement.classList.toggle('tw-dark', isDark);
     this.setPrimeNgTheme(isDark);
+    this.setBrowserThemeColor(isDark);
     this.darkModeSubject.next(isDark);
   }
 
@@ -30,7 +31,7 @@ export class ThemeService {
     );
 
     this.setPrimeNgTheme(isDark);
-
+    this.setBrowserThemeColor(isDark);
     this.applyRipple(isDark, event);
   }
 
@@ -75,5 +76,16 @@ export class ThemeService {
     };
 
     root.addEventListener('animationend', onAnimationEnd);
+  }
+
+  /**
+   * @description Sets meta tag color.
+   * @param {boolean} isDark - Whether dark mode should be enabled.
+   */
+  private setBrowserThemeColor(isDark: boolean): void {
+    const metaThemeColor = document.getElementById('meta-theme-color') as HTMLMetaElement | null;
+    if (!metaThemeColor) return;
+
+    metaThemeColor.content = isDark ? '#020617' : '#f9fafb';
   }
 }
