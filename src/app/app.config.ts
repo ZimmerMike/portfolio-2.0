@@ -22,9 +22,9 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    provideAnimations(),
     provideRouter(routes, withHashLocation()),
     provideHttpClient(),
-    provideAnimations(),
     importProvidersFrom([TranslateModule.forRoot(provideTranslation())]),
   ]
 };

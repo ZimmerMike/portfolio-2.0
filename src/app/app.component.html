@@ -1,1 +1,3 @@
-<router-outlet />
+<div class="tw-min-h-screen tw-flex tw-flex-col" [@rootRouteAnimations]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
