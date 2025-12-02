@@ -7,18 +7,18 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 import { ExperienceEvent } from '../../../core/interfaces/experience-event.interface';
 
 // PrimeNG
-import { CardModule } from 'primeng/card';
 import { TimelineModule } from 'primeng/timeline';
 import { TranslateModule } from '@ngx-translate/core';
 import { ExperienceConstants } from '../../../core/constants/experience.constants';
 import { ConditionalAlign } from '../../../core/types/experience-timeline-align.type';
+import { CustomInfoCardComponent } from '../../../core/components/custom-info-card/custom-info-card.component';
 
 @Component({
   selector: 'app-experience',
   standalone: true,
   imports: [
     ButtonModule,
-    CardModule,
+    CustomInfoCardComponent,
     CommonModule,
     TimelineModule,
     TranslateModule

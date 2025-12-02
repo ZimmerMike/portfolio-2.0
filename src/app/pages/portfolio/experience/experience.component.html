@@ -12,7 +12,7 @@
         </ng-template>
 
         <ng-template pTemplate="content" let-event>
-          <p-card [header]="event.companyName" [subheader]="event.position">
+          <app-custom-info-card [header]="event.companyName" [subheader]="event.position">
             <div class="tw-flex tw-flex-col">
               <h6 class="tw-m-0 tw-float-right">
                 {{ event.startDate }} -
@@ -43,7 +43,7 @@
                 </p-button>
               </div>
             </div>
-          </p-card>
+          </app-custom-info-card>
         </ng-template>
         <ng-template pTemplate="opposite" let-event>
           <div class="tw-hidden md:tw-flex tw-flex-col tw-items-center">

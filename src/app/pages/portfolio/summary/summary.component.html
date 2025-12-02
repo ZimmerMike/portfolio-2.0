@@ -3,21 +3,21 @@
     <h1 class="tw-text-2xl md:tw-text-3xl tw-text-center">{{ 'SUMMARY.TITLE' | translate }}</h1>
   </header>
   <section class="tw-flex tw-flex-col tw-gap-4 tw-flex-wrap">
-    <p-card styleClass="tw-border-solid tw-bg-white/5 tw-border-black/5 dark:tw-border-white/5" [header]="'SUMMARY.PANEL_1.HEADER' | translate">
+    <app-custom-info-card styleClass="tw-border-solid tw-bg-white/5 tw-border-black/5 dark:tw-border-white/5" [header]="'SUMMARY.PANEL_1.HEADER' | translate">
       <article class="tw-text-justify">
         <p [innerHTML]="'SUMMARY.PANEL_1.PARAGRAPH_1' | translate"></p>
         <p [innerHTML]="'SUMMARY.PANEL_1.PARAGRAPH_2' | translate"></p>
         <p [innerHTML]="'SUMMARY.PANEL_1.PARAGRAPH_3' | translate"></p>
       </article>
-    </p-card>
-    <p-card styleClass="tw-border-solid tw-bg-white/5 tw-border-black/5 dark:tw-border-white/5" [header]="'SUMMARY.PANEL_2.HEADER' | translate">
+    </app-custom-info-card>
+    <app-custom-info-card styleClass="tw-border-solid tw-bg-white/5 tw-border-black/5 dark:tw-border-white/5" [header]="'SUMMARY.PANEL_2.HEADER' | translate">
       <article class="tw-text-justify">
         <p [innerHTML]="'SUMMARY.PANEL_2.PARAGRAPH_1' | translate"></p>
         <p [innerHTML]="'SUMMARY.PANEL_2.PARAGRAPH_2' | translate"></p>
         <p [innerHTML]="'SUMMARY.PANEL_2.PARAGRAPH_3' | translate"></p>
       </article>
-    </p-card>
-    <p-card styleClass="tw-border-solid tw-bg-white/5 tw-border-black/5 dark:tw-border-white/5" [header]="'SUMMARY.PANEL_3.HEADER' | translate">
+    </app-custom-info-card>
+    <app-custom-info-card styleClass="tw-border-solid tw-bg-white/5 tw-border-black/5 dark:tw-border-white/5" [header]="'SUMMARY.PANEL_3.HEADER' | translate">
       <article class="tw-text-justify">
         <p [innerHTML]="'SUMMARY.PANEL_3.PARAGRAPH_1' | translate"></p>
         <h4 [innerHTML]="'SUMMARY.PANEL_3.SECTION_1_TITLE' | translate"></h4>
@@ -28,6 +28,6 @@
         <p [innerHTML]="'SUMMARY.PANEL_3.PARAGRAPH_5' | translate"></p>
         <p [innerHTML]="'SUMMARY.PANEL_3.PARAGRAPH_6' | translate"></p>
       </article>
-    </p-card>
+    </app-custom-info-card>
   </section>
 </main>

@@ -1,25 +1,20 @@
 <span class="shadow">
   <div class="switch" id="theme-switch" [class.is-active]="isDarkMode">
-    <!-- InputSwitch invisible pero clickeable -->
     <p-inputSwitch
       [(ngModel)]="isDarkMode"
       (onChange)="toggleDarkMode($event.checked)"
-      styleClass="switch-input"
-    />
-    <!-- Decoración (igual que tu HTML original) -->
-    <img class="switch__cloud --2" src="../assets/svg/cloud-1.svg" alt="" />
-    <img class="switch__cloud --1" src="../assets/svg/cloud-2.svg" alt="" />
-
+      styleClass="switch-input" />
+    <img class="switch__cloud --2" src="../assets/svg/cloud-2.svg" alt="Cloud 2 svg" />
+    <img class="switch__cloud --1" src="../assets/svg/cloud-1.svg" alt="Cloud 1 svg" />
     <div class="switch__inner">
       <div class="switch-globe">
         <img
           class="switch-globe__moon"
           src="../assets/img/dark-mode-toggle/moon_1.webp"
-          alt=""
-        />
+          alt="Moon svg" />
         <div class="switch-globe__circle"></div>
       </div>
-      <img class="switch__stars" src="../assets/svg/stars.svg" alt="" />
+      <img class="switch__stars" src="../assets/svg/stars.svg" alt="Stars svg" />
     </div>
   </div>
 </span>
