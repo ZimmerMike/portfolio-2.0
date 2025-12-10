@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { AppConstants } from '../../core/constants/app.constants';
 import { TranslateService } from '@ngx-translate/core';
 import { CustomDarkmodeSwitchComponent } from '../../core/components/custom-darkmode-switch/custom-darkmode-switch.component';
+import { GlowEffectComponent } from '../../core/ui/glow-effect/glow-effect.component';
 
 @Component({
   selector: 'app-portfolio',
@@ -22,6 +23,7 @@ import { CustomDarkmodeSwitchComponent } from '../../core/components/custom-dark
     CustomDarkmodeSwitchComponent,
     DropdownModule,
     FormsModule,
+    GlowEffectComponent,
     RouterLink,
     RouterOutlet,
     SidebarComponent

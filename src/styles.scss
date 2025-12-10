@@ -67,3 +67,38 @@ html.theme-ripple::before {
     opacity: 0;
   }
 }
+
+.glow-overlay {
+  --glow-size: 30rem;
+  --glow-opacity: 0;
+  --glow-color: rgba(255, 0, 80, 0.3);
+
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+
+  background: var(--glow-color);
+
+  mask-image: radial-gradient(
+    var(--glow-size) var(--glow-size) at var(--glow-x) var(--glow-y),
+    white,
+    transparent 60%
+  );
+
+  opacity: var(--glow-opacity);
+
+  animation: hue-rotate-glow 8s linear infinite;
+  mix-blend-mode: screen;
+}
+
+@keyframes hue-rotate-glow {
+  0%   { filter: hue-rotate(0deg) blur(80px); }
+  100% { filter: hue-rotate(360deg) blur(80px); }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .glow-overlay {
+    display: none !important;
+  }
+}

@@ -11,7 +11,7 @@
       "CONTACT": "Contáctame",
       "LEARN_ABOUT_ME": "Conoce más sobre mí"
     },
-    "HEADER": "Yo soy Miguel Angel Hernandez Jimenez",
+    "HEADER": "Yo soy <strong class='tw-font-bold'>Mike Hernandez</strong>",
     "HERO_PARAGRAPH_1": "Desarrollador Front-End especializado en <strong>Angular</strong> y entusiasta del desarrollo de videojuegos",
     "HERO_PARAGRAPH_2": "Aunque también tengo muchas otras habilidades...",
     "OR": "ó",
